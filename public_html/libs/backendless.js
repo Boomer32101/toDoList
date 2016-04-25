@@ -350,7 +350,7 @@
                     };
                 }
 
-                xhr.send(config.data);
+                //xhr.send(config.data);
 
                 if (config.isAsync) {
                     return xhr;
@@ -374,7 +374,7 @@
         try {
             return cacheMethods[config.cachePolicy.policy].call(this, config);
         } catch (error) {
-            throw error;
+            //throw error;
         }
     };
 
