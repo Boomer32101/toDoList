@@ -5,9 +5,16 @@ $(function () {
          
      Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
      
-     var user = new Backendless.User();
-     user.email = "owen.vande@outlook.com";
-     user.password = "password";
-     Backendless.UserService.register(user);
+     
+     var dataStore = Backendless.Persistence.of(Posts);
+     var post = new Posts({title:"My first Poost", content:"Poost number one", authorEmail:"email@email.com"});
+     dataStore.save(post);
          
-     });
+});
+     
+function Posts(args){
+    args = args || {};
+    this.title = args.title || "";
+    this.content = args.content || "";
+    this.authorEmail = args.authorEmail || "";
+}
