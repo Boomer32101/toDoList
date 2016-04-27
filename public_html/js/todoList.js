@@ -15,7 +15,10 @@ $(function () {
      };
      
      var blogScript = $("#blogs-template").html();
-     var blogTemplate = Handlebars.compile(blogScript)
+     var blogTemplate = Handlebars.compile(blogScript);
+     var blogHTML = blogTemplate(wrapper);
+     
+     $('.main-container').html(blogHTML);
      
 });
      
