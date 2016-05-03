@@ -62,8 +62,18 @@
                     <h2 class="blog-post-title">{{title}}</h2>
                     <p class="blog-post-meta">At {{format created}} by {{authorEmail}}</p>
                     <div>{{content}}</div>
+                    <button class="btn btn-large waves-effect waves-light white-out-post orange">Mark as Complete</button>
+                    <button class="btn btn-large waves-effect waves-light trash orange darken-1" type="submit" name="action" data={{objectId}}>Delete</button>
                 </div>
             {{/each}}
       </script>
+      
+      <script id="check-done-template" type="text/x-handlebars-template">
+        <div class="white-text">
+          <center><h4 class="blog-post-meta italic">Task has been marked as complete</h4></center>
+          <center><button class="btn btn-large waves-effect waves-light white-in-post orange darken-1"><a href="index.html" class="white-text">Return to Home</a></button></center>
+        </div>          
+      </script>
+      
     </body>
   </html>

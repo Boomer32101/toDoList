@@ -24,6 +24,21 @@ $(function () {
      
      $('.main-container').html(blogHTML);
      
+     $(document).on('click', '.white-out-post', function(){
+         var checkListScript = $("#check-done-template").html();
+         var checkListTemplate = Handlebars.compile(checkListScript);
+         $('.main-container').html(checkListTemplate);
+     });
+     
+     $(document).on('click','.white-in-post', function(){
+         var uncheckListScript = $("#check-done-template").html();
+         var uncheckListTemplate =  Handlebars.compile(uncheckListScript);
+         $('.main-container').html(uncheckListTemplate);
+     });
+     
+     $(document).on('click','.delete-post',function(){
+         Backendless.Persistence.of().remove();
+     });
 });
      
 function Posts(args){
@@ -32,6 +47,13 @@ function Posts(args){
     this.content = args.content || "";
     this.authorEmail = args.authorEmail || "";
 }
+
+$(document).on('click','.trash',function(event){
+   console.log(event);
+   Backendless.Persistence.of(Posts).remove(event.target.attributes.data.nodeValue);
+   location.reload();
+});
+
 $('.dropdown-button').dropdown({
       inDuration: 300,
       outDuration: 225,
