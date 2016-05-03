@@ -33,7 +33,20 @@ $(function () {
      
      $(document).on('submit','.form-add-blog',function(event){
          event.preventDefault();
-         
+         var x;
+        x = document.getElementById("title").value;
+        var y;
+        y = document.getElementById("content").value;
+        if (x == ""){
+            Materialize.toast('Title cannot be empty', 4000);
+            return false;
+        }
+        if (y == ""){
+            Materialize.toast('Content cannot be empty', 4000);
+            return false;
+        }
+        else
+        {
          var data =$(this).serializeArray(),
              title = data[0].value,
              content = data[1].value;
@@ -50,6 +63,7 @@ $(function () {
              
              this.title.value = "";
              this.content.value = "";
+         }
      });
      
      $(document).on('click','.logout',function(){
@@ -87,6 +101,7 @@ function userLoggedOut(){
     console.log("logged out");
 }
 function gotError(){
-    console.log("error message - " + error.message)
-    console.log("error code - " + error.code)
+    console.log("error message - " + error.message);
+    console.log("error code - " + error.code);
+    Materialize.toast('I am a toast!', 4000);
 }
