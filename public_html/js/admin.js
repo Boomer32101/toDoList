@@ -55,7 +55,7 @@ $(function () {
              
              var postObject = new Posts({
                  title: title,
-                 contnet: content,
+                 content: content,
                  authorEmail: Backendless.UserService.getCurrentUser().email
              });
              

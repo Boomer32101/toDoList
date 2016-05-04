@@ -12,16 +12,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body background="blog pa backdrop.png">
         <header>
             <nav class="brown">
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo">Owen Vandevelde</a>
                     <a class="dropdown-button btn right orange darken-1" href='#' data-activates='dropdown1'>Links</a>
                     <ul id="dropdown1" class="dropdown-content">
-                        <li><a class="orange-text" href="index.html">Hoom</a></li>
+                        <li><a class="orange-text" href="index.html">Home</a></li>
                         <li class="divider"></li>
-                        <li><a class="orange-text" href="admin.html">Admoon</a></li>
+                        <li><a class="orange-text" href="admin.html">Admin</a></li>
                     </ul>
                 </div>
             </nav>
@@ -29,7 +29,7 @@
         <main>
             <div class="container">
                 <div class="row">
-                    <h1 class="center-align">Too Doo Loost</h1>
+                    <h1 class="center-align">To Do List</h1>
                 </div>
                 <div class="row">
                     <div class=" col s12 main-container">
@@ -40,7 +40,7 @@
         </main>
         <footer class="page-footer brown">
             <div class="container">
-                <p><a href="#">Toop oof poog</a></p>
+                <p><a href="#">Top of page</a></p>
             </div>
             <div class="footer-copyright">
                 <div class="container">
@@ -57,7 +57,7 @@
       <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
       
       <script id="login-template" type="text/x-handlebars-template">
-         <div class="col s6 offset-s3">
+         <div class="col s6 offset-s3 card-panel orange lighten-4">
           <h2 class="center-align">Loogin</h2>
           <div>
               <form class="col s12 form-signin">
@@ -92,17 +92,17 @@
       <script id="add-blog-template" type="text/x-handlebars-template">
       <h2 class="center-align">Add a new Task</h2>
         <div class="row">
-            <form class="col s8 offset-s2 form-add-blog">
+            <form class="col s8 offset-s2 form-add-blog card-panel orange lighten-4">
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="title" type="text" name="title">
-                        <label for="title"></label>
+                        <label for="title">Title</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="content" name="content" class="materialize-textarea"></textarea>
-                        <label for="content"></label>
+                        <label for="content">Content</label>
                     </div>
                 </div>
                 <div class="row">

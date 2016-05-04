@@ -15,6 +15,10 @@ main{
 }
 .blog-post-meta{
     margin-bottom: 20px;
-    color: #999;
+    color: white;
     font-style: italic;
+}
+.bottom-space{
+    margin-bottom: 30px;
+    //padding-bottom: 25px;
 }
