@@ -5,10 +5,11 @@ $(function () {
          
      Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
      
-     
-     var postsCollection = Backendless.Persistence.of(Posts).find();
-     
      console.log(postsCollection);
+     
+     var dataQuery = {condition:"ownerId = " + Backendless.LocalCache.get("current-user-id") + ""};
+         
+     var postsCollection = Backendless.Persistence.of(Posts).find(dataQuery);
      
      var wrapper = {
          posts: postsCollection.data
@@ -17,11 +18,11 @@ $(function () {
      Handlebars.registerHelper('format', function(time) {
          return moment(time).format("dddd, MMMM Do YYYY");
      });
-     
+      
      var blogScript = $("#blogs-template").html();
      var blogTemplate = Handlebars.compile(blogScript);
      var blogHTML = blogTemplate(wrapper);
-     
+          
      $('.main-container').html(blogHTML);
      
      $(document).on('click', '.white-out-post', function(){
