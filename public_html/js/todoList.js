@@ -5,7 +5,7 @@ $(function () {
          
      Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
      
-     console.log(postsCollection);
+     
      
      var dataQuery = {condition:"ownerId = '" + Backendless.LocalCache.get("current-user-id") + "'"};
          
