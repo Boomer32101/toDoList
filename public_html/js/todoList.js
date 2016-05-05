@@ -7,7 +7,7 @@ $(function () {
      
      console.log(postsCollection);
      
-     var dataQuery = {condition:"ownerId = " + Backendless.LocalCache.get("current-user-id") + ""};
+     var dataQuery = {condition:"ownerId = '" + Backendless.LocalCache.get("current-user-id") + "'"};
          
      var postsCollection = Backendless.Persistence.of(Posts).find(dataQuery);
      
